@@ -57,8 +57,8 @@ int main(){
                 troca_palavra(frase);
                 break;
             case 6:
-                frase = leia();
                 cin.ignore();
+                frase = leia();
                 break;
             case 7:
                 system("cls");
@@ -73,7 +73,7 @@ int main(){
 void conta_letras (string frase)
 {
     cout << "Comprimento da frase, contando espaco: " << frase.length() << endl;
-    cin.ignore();
+
 }
 
 void conta_palavras (string frase)
@@ -87,8 +87,7 @@ void conta_palavras (string frase)
             frase.erase(0, i);
         }
     }
-    cout << "Existe " << repete << " palavra(s)" << endl;
-    cin.ignore();
+    cout << "Há " << repete << " palavra(s)" << endl;
 }
 
 void conta_a (string frase)
@@ -102,7 +101,6 @@ void conta_a (string frase)
         }
     }
     cout << "Numero de letras 'a': " << num << endl;
-    cin.ignore();
 }
 
 vector<string> separa_palavras (string frase)
@@ -159,7 +157,6 @@ void repete_palavras(string oracao)
             cout << "A palavra " << repete << " aparece " << aparece << " vez(es)" << endl;
         }
     }
-    cin.ignore();
 }
 
 void troca_palavra(string frase)
@@ -179,7 +176,6 @@ void troca_palavra(string frase)
         cout << organizado[i] << " ";
     }
     cout << endl;
-    cin.ignore();
 }
 
 string leia ()
