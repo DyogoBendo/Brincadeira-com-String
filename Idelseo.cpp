@@ -35,23 +35,25 @@ void cidade (vector <string> linhas)
             achou = separa_palavras(procura);
         }
     }
+
     for (int i = 0; i < achou.size(); i ++)
     {
         procura = achou[i];
-        if (procura.find(";") != -1 && legal == 1)
+        if (procura.find(';') != -1)
         {
-            finalmente = procura.substr( massa,  procura.find(";") - massa);
-            finalmente = "Fortaleza";
-            cout << "A cidade do Milton Holanda eh: "  <<  finalmente << endl;
+            legal++;
         }
-        else if (procura.find(";"))
+
+        if (procura.find(';') != -1 && legal == 2)
         {
-            if (legal == 1)
+
+            for (int j = 1; j < procura.length(); j ++)
             {
-                massa = procura.find(";");
+                finalmente.push_back(procura[j]);
             }
-            legal ++;
+            cout << "A cidade do Milton Holanda eh: "  << finalmente << endl;
         }
+
 
     }
 }
